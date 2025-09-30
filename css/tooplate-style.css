@@ -571,3 +571,27 @@ b, strong {
     vertical-align: top;
   }
 }
+
+/* Layout tightening overrides for a more professional, compact look */
+.full-screen {
+  padding: 5rem 0;
+}
+
+section.project,
+section.resume,
+section.contact {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+/* Reduce timeline vertical gaps */
+.timeline-wrapper {
+  padding: 14px 0;
+}
+
+/* Slightly reduce mobile top margin on about image */
+@media (max-width: 991px) {
+  .about-image {
+    margin-top: 2.5em;
+  }
+}
