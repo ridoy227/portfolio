@@ -595,3 +595,27 @@ section.contact {
     margin-top: 2.5em;
   }
 }
+
+/* Projects section as full-width colored box with ~80% viewport height */
+section.project {
+  width: 100%;
+  min-height: 80vh;
+  background: #f5f6fa;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Dark mode variant for projects box */
+.dark-mode section.project {
+  background: #141418;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* Remove gap between About hero and Projects box */
+#about.full-screen {
+  padding-bottom: 0;
+}
+section.project {
+  padding-top: 0;
+}
