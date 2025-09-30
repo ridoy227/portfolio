@@ -110,6 +110,12 @@ b, strong {
   position: relative;
 }
 
+/* Align the static and animated parts of the H1 on the same baseline */
+.animated-text {
+  display: inline-flex;
+  align-items: baseline;
+}
+
 .animated-info {
   display: inline-block;
   vertical-align: top;
@@ -574,8 +580,8 @@ b, strong {
 
 /* Keep animated text the same size as heading and align baseline */
 .animated-info {
-  margin-top: -4px;
-  margin-left: -8px;
+  /* margin-top: -8px;
+  margin-left: -10px; */
   vertical-align: baseline;
   white-space: nowrap;
 }
