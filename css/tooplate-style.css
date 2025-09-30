@@ -521,7 +521,7 @@ b, strong {
 }
 @media (max-width: 580px) {
 	.animated-info {
-		min-width: 200px;
+		min-width: 800px;
 	}
   .animated-item {
     font-size: 30px;
@@ -570,6 +570,19 @@ b, strong {
     display: inline-block;
     vertical-align: top;
   }
+}
+
+/* Keep animated text the same size as heading and align baseline */
+.animated-info {
+  margin-top: -4px;
+  margin-left: -8px;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+.animated-item {
+  font-size: 0.6em;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 /* Layout tightening overrides for a more professional, compact look */
