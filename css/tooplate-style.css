@@ -110,11 +110,8 @@ b, strong {
   position: relative;
 }
 
-/* Align the static and animated parts of the H1 on the same baseline */
-.animated-text {
-  display: inline-flex;
-  align-items: baseline;
-}
+/* Remove inline-flex baseline alignment to restore previous layout */
+/* .animated-text { display: inline-flex; align-items: baseline; } */
 
 .animated-info {
   display: inline-block;
@@ -525,9 +522,10 @@ b, strong {
     padding: 3px 20px;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 280px) {
 	.animated-info {
-		min-width: 800px;
+		min-width: 200px;
+    min-height: 100px;
 	}
   .animated-item {
     font-size: 30px;
@@ -579,14 +577,16 @@ b, strong {
 }
 
 /* Keep animated text the same size as heading and align baseline */
+/* Keep animated text aligned and unbroken (restored) */
 .animated-info {
-  /* margin-top: -8px;
-  margin-left: -10px; */
+  margin-top: -50px;
+  margin-left: 0px;
   vertical-align: baseline;
   white-space: nowrap;
 }
 .animated-item {
-  font-size: 0.6em;
+  font-size: 0.72em;
+  line-height: 1.5;
   white-space: nowrap;
   word-break: keep-all;
 }
@@ -637,4 +637,16 @@ section.project {
 }
 section.project {
   padding-top: 0;
+}
+
+/* Nudge the static "Hey, I'm" text slightly lower */
+.about .animated-text > .mr-2 {
+  position: relative;
+  top: 40px;
+  margin-top: 20px;
+}
+
+/* Add space between the heading and the lead paragraph in About */
+.about .about-text p {
+  margin-top: 60px;
 }
